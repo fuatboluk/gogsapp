@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=GogsApp
+Comment=Unofficial desktop gui app of Gogs
+Exec=/opt/GogsApp/gogsapp %u
+Icon=/opt/GogsApp/gogs-logo.png
+Terminal=false
+Type=Application
+Categories=Utility;Archiving;FileTools;
+Keywords=git;gui;repository;app;manager;
