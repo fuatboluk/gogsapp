@@ -10,6 +10,8 @@ webkit2gtk3-devel
 
 The gogs server must be installed and running on http://localhost:3000/
 
+The gogs installation: https://gogs.io/docs/installation
+
 # Download
 
 git clone https://gitlab.com/fuatboluk/gogsapp.git
