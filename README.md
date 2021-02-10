@@ -2,6 +2,8 @@
 
 Unofficial desktop gui app of Gogs
 
+![Alt text](https://gitlab.com/fuatboluk/gogsapp/raw/master/screeshot.png "GogsApp Screenshot")
+
 # Requirements
 
 gtk3-devel
