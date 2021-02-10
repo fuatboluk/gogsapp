@@ -26,4 +26,8 @@ make
 
 sudo make install
 
+# Extra
+
+custom/templates/home.tmpl, must be added to the Gogs working directory for the Turkish homepage, and the Gogs server must be restarted! 
+
 # End
