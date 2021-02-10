@@ -46,14 +46,16 @@ int main(int argc, char *argv[])
 
     WebKitWebContext * context = webkit_web_context_get_default();
     WebKitCookieManager * manager = webkit_web_context_get_cookie_manager(context);
+
+    WebKitWebsiteDataManager * data = webkit_website_data_manager_new("base-data-directory", g_get_user_data_dir(), "base-cache-directory", g_get_user_cache_dir(), NULL);
+    g_autofree char * cookie_path = g_build_filename(webkit_website_data_manager_get_base_data_directory(data), "gogsapp-cookie.sqlite", NULL);
+
+    webkit_website_data_manager_get_cookie_manager(data);
     webkit_cookie_manager_set_accept_policy(manager, WEBKIT_COOKIE_POLICY_ACCEPT_ALWAYS);
-    webkit_cookie_manager_set_persistent_storage(manager, "cookies.sqlite", WEBKIT_COOKIE_PERSISTENT_STORAGE_SQLITE);
+    webkit_cookie_manager_set_persistent_storage(manager, cookie_path, WEBKIT_COOKIE_PERSISTENT_STORAGE_SQLITE);
 
     gtk_widget_set_events(GTK_WIDGET(webView), GDK_BUTTON_PRESS_MASK);
     webkit_settings_set_user_agent(settings, "Mozilla/5.0 (X11; Future OS; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0");
-
-    WebKitWebsiteDataManager * data = webkit_website_data_manager_new("web_data");
-    webkit_website_data_manager_get_cookie_manager(data);
 
     webkit_web_view_load_uri(webView, "http://localhost:3000/");
 
