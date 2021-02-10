@@ -2,7 +2,7 @@
 
 Unofficial desktop gui app of Gogs
 
-![Alt text](https://gitlab.com/fuatboluk/gogsapp/raw/master/screeshot.png "GogsApp Screenshot")
+![Alt text](https://gitlab.com/fuatboluk/gogsapp/-/blob/master/screenshot.png "GogsApp Screenshot")
 
 # Requirements
 
