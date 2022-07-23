@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
     webkit_cookie_manager_set_persistent_storage(manager, cookie_path, WEBKIT_COOKIE_PERSISTENT_STORAGE_SQLITE);
 
     gtk_widget_set_events(GTK_WIDGET(webView), GDK_BUTTON_PRESS_MASK);
-    webkit_settings_set_user_agent(settings, "Mozilla/5.0 (X11; Future OS; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0");
+    webkit_settings_set_user_agent(settings, "Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0");
 
     webkit_web_view_load_uri(webView, "http://localhost:3000/");
 
